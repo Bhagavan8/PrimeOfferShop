@@ -1,0 +1,318 @@
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+html, body {
+  overflow-y: scroll; 
+  overflow-x: hidden; 
+}
+
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; 
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}
+
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.hero-section div {
+  width: 45%;
+  text-align: center;
+}
+
+.get-started {
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* SocialMedia.css */
+.social-media-icons {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-icons a {
+  font-size: 30px;
+  color: #000; /* Default color */
+  transition: color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  opacity: 0.7;
+}
+
+.social-media-icons .facebook {
+  color: #3b5998; /* Facebook Blue */
+}
+
+.social-media-icons .instagram {
+  color: #e4405f; /* Instagram Pink */
+}
+
+.social-media-icons .whatsapp {
+  color: #25d366; /* WhatsApp Green */
+}
+
+.social-media-icons .twitter {
+  color: #1da1f2; /* Twitter Blue */
+}
+
+/* ScrollButtons.css */
+.scroll-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scroll-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: #0056b3;
+}
+.office-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.office-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.office-img {
+  border: 2px solid #007bff; /* Add border color */
+  border-radius: 0.5rem; /* Border radius */
+  position: relative; /* For overlay positioning */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.office-img:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.overlay-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.product-details {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.image-gallery img {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.quantity-selector {
+  margin: 20px 0;
+}
+
+.quantity-selector input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.img_fluid_about_image {
+  max-width: 70%;
+  height: auto;
+}
+
+.feature-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-link {
+  display: inline-block;
+  color: inherit; /* Keeps icon color same as text */
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #f39c12; /* Change icon color on hover */
+}
+
+/* CardSection.css */
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 22%;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover and Animation Effects */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover i {
+  color: #4a90e2;
+  transform: rotate(360deg);
+}
+
+/* Icon Styles */
+.card i {
+  font-size: 48px;
+  color: #2e5bff;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+/* Title Styles */
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+/* Description Styles */
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Mouse Hover */
+.card:hover h3 {
+  color: #2e5bff;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(46, 91, 255, 0.1);
+  transform: skewX(-45deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+
+

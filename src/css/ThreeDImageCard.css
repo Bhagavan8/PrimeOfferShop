@@ -1,0 +1,75 @@
+/* Container for the 3D image card */
+.image-card-container {
+    perspective: 1000px; /* Defines how intense the 3D effect appears */
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+  }
+  
+  .image-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Preserves 3D transformation of child elements */
+    transition: transform 1s; /* Smooth animation effect */
+  }
+  
+  .image-card:hover {
+    transform: rotateY(180deg); /* Rotate the card 180 degrees on hover */
+  }
+  
+  /* Front side of the card */
+  .image-card-front,
+  .image-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when rotating */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Front side image */
+  .image-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Back side */
+  .image-card-back {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transform: rotateY(180deg); /* Rotate the back side to align it with the front */
+  }
+  
+  .image-card-back h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .image-card-back p {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+  }
+  
+  /* Animation effect for a smoother rotation */
+  .image-card:hover {
+    transform: rotateY(180deg);
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .image-card-container {
+      width: 100%;
+    }
+  }
+  
