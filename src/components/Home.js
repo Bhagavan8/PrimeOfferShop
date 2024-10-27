@@ -10,10 +10,16 @@ import Footer from './Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../css/bootstrap.min.css';
-import pic from '../images/resizedImage.png';
+import 'font-awesome/css/font-awesome.min.css';
 import aboutCompany from '../images/ecommerce.webp';
+import imageLeft from '../images/Saree.png';
+import imageRight from '../images/Saree_Right.png';
 
 const Home = () => {
+  const phoneNumber = '7013765836';
+  const message = 'Hello! I need some assistance.';
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   return (
     <div className="App">
       <Navbar />
@@ -24,10 +30,9 @@ const Home = () => {
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="instagram">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="whatsapp">
-          <FontAwesomeIcon icon={faWhatsapp} />
-        </a>
       </div>
+
+      {/* Carousel Section */}
       <div className="carousel-header">
         <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
           <ol className="carousel-indicators">
@@ -35,41 +40,34 @@ const Home = () => {
             <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
           </ol>
           <div className="carousel-inner" role="listbox">
+            
             <div className="carousel-item active">
-              <img src={pic} className="img-fluid" alt="Image" />
               <div className="carousel-caption">
                 <div className="text-center p-4" style={{ maxWidth: '900px' }}>
-                  <h4 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                  <h4 className="text-blue text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
                     Your One-Stop Shop for All Your Needs!
                   </h4>
-                  <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                  <h1 className="display-1 text-capitalize text-blue mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">
                     Shop Smart, Shop PrimeOfferShop!
                   </h1>
-                  <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">
-                    Explore our wide range of quality products and unbeatable deals that make shopping a breeze. From fashion to electronics, home essentials to health products, we've got everything you need, all in one place!.
+                  <p className="text-black mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">
+                    Explore our wide range of quality products and unbeatable deals that make shopping a breeze. From fashion to electronics, home essentials to health products, we've got everything you need, all in one place!
                   </p>
-                  <a className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">
-                    More Details
-                  </a>
                 </div>
               </div>
             </div>
             <div className="carousel-item">
-              <img src={pic} className="img-fluid" alt="Image" />
               <div className="carousel-caption">
                 <div className="text-center p-4" style={{ maxWidth: '900px' }}>
-                  <h5 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                  <h5 className="text-blue text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
                     Fast & Reliable Delivery
                   </h5>
-                  <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                  <h1 className="display-1 text-capitalize text-blue mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">
                     Speed, Security, and Satisfaction!
                   </h1>
-                  <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">
+                  <p className="text-black mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">
                     At PrimeOfferShop, we ensure quick, secure, and reliable delivery for every order. From fast processing to careful handling, we make sure your package reaches you safely and on time.
                   </p>
-                  <a className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">
-                    More Details
-                  </a>
                 </div>
               </div>
             </div>
@@ -167,28 +165,52 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid features overflow-hidden py-5">
-      <div className="container">
-        <div className="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div className="sub-style">
-            <h5 className="sub-title text-primary px-3">Why Choose Us</h5>
+      <div className="banner-container">
+        <div className="banner-images">
+          <img
+            className="banner-image-left"
+            src={imageLeft}
+            alt="Left Model"
+          />
+          <div className="banner-content text-center">
+            <h1 className="banner-title">Unlock Exclusive Benefits</h1>
+            <h4 className="banner-subtitle">Become a PrimeOfferShop Member</h4>
+            <button className="btn btn-primary banner-btn">Sign Up Now</button>
+            <p className="banner-description">
+              Join our membership for special access to exclusive collections,
+              early previews, and personalized styling tips. Elevate your fashion
+              journey with rewards tailored just for you!
+            </p>
           </div>
-          <h1 className="display-5 mb-4">Custom Solutions Tailored to Your Needs</h1>
-          <p className="mb-0">
-          At our e-commerce platform, we provide personalized services designed to meet your specific requirements. Our commitment to customer satisfaction ensures that you receive the best products and services tailored to your preferences. Experience seamless delivery and exceptional support that puts you first!
-          </p>
+          <img
+            className="banner-image-right"
+            src={imageRight}
+            alt="Right Model"
+          />
         </div>
-        <div className="card-section">
-      {cards.map((card, index) => (
-        <div className="card" key={index}>
-          <i className={`fas ${card.icon}`}></i>
-          <h3>{card.title}</h3>
-          <p>{card.description}</p>
-        </div>
-      ))}
-    </div>
       </div>
-    </div>
+      <div className="container-fluid features overflow-hidden py-5">
+        <div className="container">
+          <div className="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="sub-style">
+              <h5 className="sub-title text-primary px-3">Why Choose Us</h5>
+            </div>
+            <h1 className="display-5 mb-4">Custom Solutions Tailored to Your Needs</h1>
+            <p className="mb-0">
+              At our e-commerce platform, we provide personalized services designed to meet your specific requirements. Our commitment to customer satisfaction ensures that you receive the best products and services tailored to your preferences. Experience seamless delivery and exceptional support that puts you first!
+            </p>
+          </div>
+          <div className="card-section">
+            {cards.map((card, index) => (
+              <div className="card" key={index}>
+                <i className={`fas ${card.icon}`}></i>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="container-fluid contact overflow-hidden pb-5">
         <div className="container py-5">
           <div className="office pt-5">
@@ -198,21 +220,19 @@ const Home = () => {
               </div>
               <h1 className="display-5 mb-4">Explore Our Range of Exceptional Offerings</h1>
               <p className="mb-0">
-              Unlock premium quality and unbeatable prices with our diverse selection. From top-tier electronics to stylish apparel, we provide everything you need to elevate your lifestyle. Don't miss out on our latest deals designed to meet your every need and exceed your expectations!
+                Unlock premium quality and unbeatable prices with our diverse selection. From top-tier electronics to stylish apparel, we provide everything you need to elevate your lifestyle. Don't miss out on our latest deals designed to meet your every need and exceed your expectations!
               </p>
             </div>
             <div className="row g-4 justify-content-center">
-              {offices.map((office, index) => (
+              {products.map((product, index) => (
                 <div key={index} className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay={`${0.1 + index * 0.2}s`}>
                   <div className="office-item p-4 border rounded position-relative overflow-hidden">
                     <div className="office-img mb-4 position-relative">
-                      <img src={office.imgSrc} className="img-fluid w-100 rounded" />
+                      <img src={product.imgSrc} className="img-fluid w-100 rounded" />
                     </div>
                     <div className="office-content d-flex flex-column">
-                      <h4 className="mb-2">{office.country}</h4>
-                      <a href={`tel:${office.phone}`} className="text-secondary fs-5 mb-2">{office.phone}</a>
-                      <a href={`mailto:${office.email}`} className="text-muted fs-5 mb-2">{office.email}</a>
-                      <p className="mb-0">{office.address}</p>
+                      <h4 className="mb-2">{product.title}</h4>
+                      <p className="mb-0">{product.description}</p>
                     </div>
                   </div>
                 </div>
@@ -221,59 +241,59 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <a
+        href={whatsappLink}
+        className="whatsapp-icon"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+      </a>
       <Footer />
     </div>
   );
 };
-const offices = [
+const products = [
   {
-    country: 'Australia',
-    phone: '+123.456.7890',
-    email: 'travisa@example.com',
-    address: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
-    imgSrc: require('../images/IMG-20241014-WA0033.jpg'),
-  },
-  {
-    country: 'Canada',
-    phone: '(012) 0345 6789',
-    email: 'travisa@example.com',
-    address: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
+    title: 'Australia',
+    description: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
     imgSrc: require('../images/IMG-20241014-WA0020.jpg'),
   },
   {
-    country: 'United Kingdom',
-    phone: '01234.567.890',
-    email: 'travisa@example.com',
-    address: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
+    title: 'Canada',
+    description: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
+    imgSrc: require('../images/IMG-20241014-WA0020.jpg'),
+  },
+  {
+    title: 'United Kingdom',
+    description: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
     imgSrc: require('../images/IMG-20241014-WA0016.jpg'),
   },
   {
-    country: 'India',
-    phone: '+123.45.67890',
-    email: 'travisa@example.com',
-    address: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
-    imgSrc: require('../images/IMG-20241014-WA0010.jpg'),
+    title: 'India',
+    description: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 United States of America.',
+    imgSrc: require('../images/IMG-20241014-WA0020.jpg'),
   },
 ];
 
 const cards = [
   {
-    icon: 'fa-boxes', // Font Awesome icon class
+    icon: 'fa-boxes',
     title: 'Unmatched Product Variety',
     description: 'Explore a diverse selection of premium products, from cutting-edge tech to stylish apparel and essential home goods—there’s something for everyone!',
   },
   {
-    icon: 'fa-truck', // Font Awesome icon class
+    icon: 'fa-truck',
     title: 'Real-Time Order Tracking',
     description: 'Track your order in real-time from checkout to delivery, ensuring you know exactly when your package will arrive.',
   },
   {
-    icon: 'fa-tags', // Font Awesome icon class
+    icon: 'fa-tags',
     title: 'Exclusive Offers and Discounts',
     description: 'Enjoy exclusive promotions and discounts on our platform, updated regularly to help you save on your favorite items.',
   },
   {
-    icon: 'fa-credit-card', // Font Awesome icon class
+    icon: 'fa-credit-card',
     title: 'Secure Payment & Hassle-Free Returns',
     description: 'Shop confidently with secure payment options and hassle-free returns, ensuring a safe and stress-free shopping experience tailored to your needs.',
   }

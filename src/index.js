@@ -6,7 +6,11 @@ import TrackOrder from "./components/TrackOrder.js";
 import Login from "./components/Login.js";
 import SignUp from "./components/SignUp.js";
 import HomePage from "./components/Home.js";
+import Dashboard from "./components/Dashboard.js";
+import OrderPage from "./components/OrderPage.js";
 import ImageUpload from "./components/ImageUpload.js";
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +22,8 @@ root.render(
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/dashboard" element={<HomePage />} />
+          <Route path="/welcome" element={<Dashboard />} />
+          <Route path="/orderPage" element={<OrderPage />} />
           <Route path="/imageUpload" element={<ImageUpload />} />
         </Routes>
   </BrowserRouter>

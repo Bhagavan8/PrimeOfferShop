@@ -22,7 +22,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f9fb;
   padding: 8px 18px;
   position: fixed;
   top: 0;
@@ -119,13 +118,6 @@ a:hover {
   background-color: #f0f0f0;
 }
 
-/* Login Dropdown Styling */
-.navbar_login {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-}
 
 .navbar_login a {
   display: flex;
@@ -139,70 +131,6 @@ a:hover {
   position: relative;
 }
 
-/* Dropdown Styling */
-.dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  min-width: 220px;
-  padding: 10px;
-  z-index: 1000;
-  display: none; /* Initially hidden */
-  animation: fadeIn 0.3s ease;
-}
-
-.login-container:hover .dropdown {
-  display: block;
-}
-
-.dropdown ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.dropdown ul li {
-  padding: 10px 10px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-.dropdown ul li:hover {
-  background-color: #f5f5f5;
-}
-
-.dropdown ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  margin-left: 10px;
-}
-
-.dropdown ul li .icon {
-  font-size: 16px;
-  color: #004D60;
-}
-
-.new-customer {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.new-customer a {
-  color: #004D60;
-  text-decoration: none;
-}
-
-.new-customer a:hover {
-  text-decoration: underline;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -214,21 +142,30 @@ a:hover {
   }
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: center;
-  }
+.container{
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .75rem);
+  padding-left: var(--bs-gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+.header_content{
+  padding: 7px 20px;
+  border-radius: 0px 0px 10px 10px;
+  position: relative;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1350;
+}
 
-  .dropdown {
-    min-width: 180px;
-  }
 
-  .login-btn {
-    font-size: 14px;
-  }
-
-  .dropdown ul li a {
-    font-size: 12px;
-  }
+.navbar-expand-lg {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
 }

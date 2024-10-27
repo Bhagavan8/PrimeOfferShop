@@ -231,7 +231,7 @@ body {
   color: #f39c12; /* Change icon color on hover */
 }
 
-/* CardSection.css */
+
 .card-section {
   display: flex;
   justify-content: space-between;
@@ -261,14 +261,14 @@ body {
 }
 
 .card:hover i {
-  color: #4a90e2;
+  color: #e2d04a;
   transform: rotate(360deg);
 }
 
 /* Icon Styles */
 .card i {
   font-size: 48px;
-  color: #2e5bff;
+  color: #d8ec94;
   margin-bottom: 20px;
   transition: transform 0.5s ease, color 0.3s ease;
 }
@@ -313,6 +313,136 @@ body {
     width: 100%;
   }
 }
+
+.carousel-header {
+  position: relative;
+  background: linear-gradient(135deg, rgb(233 174 174 / 90%), rgb(220 220 235 / 90%));
+  perspective: 1000px;
+}
+.product-row {
+  display: flex;
+  justify-content: center; /* Center cards in row */
+  gap: 20px;
+  padding: 20px;
+}
+
+.container {
+  max-width: 120px;
+  margin: auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2em;
+  }
+}
+
+.banner-container {
+  position: relative;
+  background-image: url('../images/green.jpg'); /* Full-width background */
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow to prevent image spill */
+}
+
+.banner-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px; /* Adjust padding for spacing between images and text */
+}
+
+.banner-image-left,
+.banner-image-right {
+  max-width: 30%;
+  height: auto;
+}
+
+.banner-content {
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 20px;
+  /* Adjust width based on screen size if needed */
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.banner-btn {
+  background-color: #9b2335; /* Dark red button */
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.banner-btn:hover {
+  background-color: #c92e47;
+}
+
+.banner-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-images {
+    flex-direction: column; /* Stack images and content vertically */
+    align-items: center;
+  }
+
+  .banner-image-left,
+  .banner-image-right {
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .banner-content {
+    margin: 0;
+  }
+}
+
+/* src/components/WhatsAppIcon.css */
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* WhatsApp green color */
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  background-color: #128c7e; /* Darker green on hover */
+}
+
+
 
 
 
